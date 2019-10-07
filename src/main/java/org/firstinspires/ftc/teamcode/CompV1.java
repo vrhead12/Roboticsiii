@@ -1044,7 +1044,9 @@ public class CompV1 extends LinearOpMode {
             {
                 if (robotAngle > HEADING_THRESHOLD)
                 {
-                    rightLateral.setPower(speed+RIGHT_LATERAL_ADJUST+SPEED_DELTA);
+                    leftDrive.setPower(0.0);
+                    rightDrive.setPower(SPEED_DELTA);
+                    rightLateral.setPower(speed);
                     leftLateral.setPower(speed);
                     telemetry.addData("Adjust", " RIGHT");
                 }
